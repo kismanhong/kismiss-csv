@@ -1,4 +1,4 @@
-package com.softtech.kismiss.csv.test;
+package com.softtech.kismiss.csv;
 
 public class Course {
 
