@@ -114,6 +114,9 @@ public class Student extends Address {
 		students.add(student1);
 		WriteToCSV.execute("[path]/csv-file.csv", Student.class, students);
 		
+		OutputStream outputStream = null;
+		WriteToCSV.writeToStream(Student.class, students, ',', outputStream); //write to outputstream
+		
 		List results = ReadFromCSV.execute("K:/test/csv-file.csv", Student.class);
 		for (Object object : results) {
 			Student std = (Student) object;
